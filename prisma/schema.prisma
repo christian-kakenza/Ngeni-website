@@ -1,16 +1,17 @@
-// WHITEBOXAi — Schéma Prisma
+// NGENI — Schéma Prisma
 // LOCAL  : SQLite  (provider = "sqlite", pas d'installation requise)
-// PROD   : PostgreSQL (provider = "postgresql" + vraie DATABASE_URL)
+// PROD   : PostgreSQL (Supabase) — provider = "postgresql"
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  // LOCAL  : SQLite  — aucune installation requise
-  // PROD   : changer en "postgresql" + mettre à jour DATABASE_URL
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  // PROD : PostgreSQL via Supabase
+  // LOCAL pour tests rapides : changer en "sqlite" + DATABASE_URL="file:./dev.db"
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 // ============================================================

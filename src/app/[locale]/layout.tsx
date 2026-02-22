@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,12 +10,12 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { SmoothScrollHandler } from "@/components/SmoothScrollHandler";
 import "@/styles/globals.css";
 
-// ── Polices "Luxury Tech" style Linear / Raycast ──────────────
-const fontSans = Inter({
+// ── Police "Plus Jakarta Sans" — géométrique, moderne, premium ──
+const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const fontMono = JetBrains_Mono({
@@ -83,7 +83,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning className={`${fontSans.variable} ${fontMono.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="theme-color" content="#050505" />
       </head>
       <body className="min-h-screen bg-brand-black antialiased">

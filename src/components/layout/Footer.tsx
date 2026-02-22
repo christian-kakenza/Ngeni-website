@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 
@@ -9,7 +10,7 @@ type FooterProps = {
   locale: string;
 };
 
-// Services NGENI (10 services — clés i18n)
+// Services NGENI (5 premiers dans le footer)
 const SERVICE_LINKS = [
   { key: "rpa" as const, href: "#services" },
   { key: "agents" as const, href: "#services" },
@@ -25,6 +26,7 @@ export async function Footer({ locale }: FooterProps) {
   ]);
 
   const currentYear = new Date().getFullYear();
+  const fr = locale === "fr";
 
   return (
     <footer className="border-t border-brand-border bg-brand-darker">
@@ -35,13 +37,13 @@ export async function Footer({ locale }: FooterProps) {
           {/* Col 1 — Branding */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-brand-accent/30 bg-brand-accent/10">
-                <span className="text-sm font-black text-brand-accent">N</span>
-              </div>
-              <span className="text-lg font-bold tracking-tight">
-                <span className="text-brand-white">NGE</span>
-                <span className="text-brand-accent">NI</span>
-              </span>
+              <Image
+                src="/logo.svg"
+                alt="NGENI"
+                width={120}
+                height={31}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-gray">
               {t("tagline")}
@@ -54,7 +56,7 @@ export async function Footer({ locale }: FooterProps) {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
               <span className="text-xs text-brand-gray">
-                {locale === "fr" ? "Tous les systèmes opérationnels" : "All systems operational"}
+                {fr ? "Tous les systèmes opérationnels" : "All systems operational"}
               </span>
             </div>
           </div>
@@ -80,7 +82,7 @@ export async function Footer({ locale }: FooterProps) {
                   href="#services"
                   className="text-sm font-medium text-brand-accent hover:text-brand-accent/80"
                 >
-                  {locale === "fr" ? "Voir tous les services →" : "See all services →"}
+                  {fr ? "Voir tous les services →" : "See all services →"}
                 </a>
               </li>
             </ul>
@@ -119,12 +121,12 @@ export async function Footer({ locale }: FooterProps) {
             </h3>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/" className="text-sm text-brand-gray transition-colors hover:text-brand-white">
+                <Link href="/privacy" className="text-sm text-brand-gray transition-colors hover:text-brand-white">
                   {t("links.privacy")}
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-brand-gray transition-colors hover:text-brand-white">
+                <Link href="/terms" className="text-sm text-brand-gray transition-colors hover:text-brand-white">
                   {t("links.terms")}
                 </Link>
               </li>
@@ -152,7 +154,7 @@ export async function Footer({ locale }: FooterProps) {
                 </a>
               </li>
 
-              {/* Localisation */}
+              {/* Bureau DRC */}
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-brand-border bg-brand-surface text-brand-accent">
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -160,9 +162,28 @@ export async function Footer({ locale }: FooterProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </span>
-                <span className="text-sm text-brand-gray">
-                  Kinshasa, RDC
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-wide text-brand-gray/50">
+                    {fr ? "Bureau DRC" : "DRC Office"}
+                  </p>
+                  <span className="text-sm text-brand-gray">Lubumbashi, RDC</span>
+                </div>
+              </li>
+
+              {/* Bureau SA */}
+              <li className="flex items-start gap-3">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-brand-border bg-brand-surface text-brand-accent">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </span>
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-wide text-brand-gray/50">
+                    {fr ? "Bureau SA" : "SA Office"}
+                  </p>
+                  <span className="text-sm text-brand-gray">Pretoria, SA</span>
+                </div>
               </li>
 
               {/* Horaires */}
@@ -173,7 +194,7 @@ export async function Footer({ locale }: FooterProps) {
                   </svg>
                 </span>
                 <span className="text-sm text-brand-gray">
-                  {locale === "fr" ? "Lun — Ven, 08:00 — 18:00" : "Mon — Fri, 08:00 — 18:00"}
+                  {fr ? "Lun — Ven, 08:00 — 18:00" : "Mon — Fri, 08:00 — 18:00"}
                 </span>
               </li>
             </ul>
@@ -183,7 +204,7 @@ export async function Footer({ locale }: FooterProps) {
               href="#contact"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition-all hover:bg-brand-accent/90 hover:shadow-glow-lg"
             >
-              {locale === "fr" ? "Démarrer un projet" : "Start a project"}
+              {fr ? "Démarrer un projet" : "Start a project"}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

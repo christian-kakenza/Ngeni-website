@@ -142,19 +142,35 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Location */}
-              <div className="flex items-center gap-4 rounded-2xl border border-brand-border bg-brand-surface/30 p-4 backdrop-blur-sm">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-brand-accent/20 bg-brand-accent/10 text-brand-accent">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
+              {/* Bureaux — 2 locations */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-start gap-3 rounded-2xl border border-brand-border bg-brand-surface/30 p-4 backdrop-blur-sm">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-brand-accent/20 bg-brand-accent/10 text-brand-accent">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-gray/60">
+                      {fr ? "Bureau DRC" : "DRC Office"}
+                    </p>
+                    <p className="mt-0.5 text-sm font-medium text-brand-white">Lubumbashi, RDC</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-gray/60">
-                    {fr ? "Localisation" : "Location"}
-                  </p>
-                  <p className="text-sm font-medium text-brand-white">{t("info.location")}</p>
+                <div className="flex items-start gap-3 rounded-2xl border border-brand-border bg-brand-surface/30 p-4 backdrop-blur-sm">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-brand-accent/20 bg-brand-accent/10 text-brand-accent">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-gray/60">
+                      {fr ? "Bureau SA" : "SA Office"}
+                    </p>
+                    <p className="mt-0.5 text-sm font-medium text-brand-white">Pretoria, SA</p>
+                  </div>
                 </div>
               </div>
 

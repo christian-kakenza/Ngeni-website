@@ -130,18 +130,17 @@ export async function Portfolio({ locale }: PortfolioProps) {
                   {t(`projects.${key}.description`)}
                 </p>
 
-                {/* CTA — disabled until real link provided */}
+                {/* CTA — lien vers la section contact */}
                 <div className="mt-5 border-t border-brand-border pt-4">
-                  <button
-                    disabled
-                    className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-xl border border-brand-border bg-brand-surface/50 px-4 py-2.5 text-sm font-medium text-brand-gray/40"
-                    aria-label={t("cta")}
+                  <a
+                    href="#contact"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-brand-accent/30 bg-brand-accent/10 px-4 py-2.5 text-sm font-medium text-brand-accent transition-all hover:border-brand-accent/50 hover:bg-brand-accent/20"
                   >
-                    {t("cta")}
+                    {locale === "fr" ? "Nous contacter" : "Contact us"}
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </article>
@@ -149,10 +148,10 @@ export async function Portfolio({ locale }: PortfolioProps) {
         </div>
 
         {/* Bottom note */}
-        <p className="mt-8 text-center text-xs text-brand-gray/40">
+        <p className="mt-8 text-center text-sm text-brand-gray/50">
           {locale === "fr"
-            ? "Les liens et visuels réels seront ajoutés prochainement."
-            : "Real links and visuals will be added soon."}
+            ? "Premiers projets en cours — Contactez-nous pour en savoir plus."
+            : "First projects underway — Contact us to learn more."}
         </p>
       </div>
     </section>

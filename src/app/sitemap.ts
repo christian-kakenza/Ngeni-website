@@ -5,37 +5,56 @@ import type { MetadataRoute } from "next";
 // Généré automatiquement à /sitemap.xml
 // ============================================================
 
-const BASE_URL = process.env.NEXTAUTH_URL ?? "http://localhost:3000";
+const BASE_URL = process.env.NEXTAUTH_URL ?? "https://ngeni.ai";
 
-// Pages publiques indexables par locale
-// (dashboard, auth et API sont exclus)
-const PUBLIC_ROUTES: {
-  fr: string;
-  en: string;
-  priority: number;
-  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
-}[] = [
-  { fr: "/fr",  en: "/en",  priority: 1.0, changeFrequency: "weekly"  },
+const SERVICE_SLUGS = [
+  "rpa", "agents", "saas", "web", "medical",
+  "agriculture", "education", "energy", "construction", "consulting",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const route of PUBLIC_ROUTES) {
-    // Version française
+  // ── Pages principales ──────────────────────────────────────
+  const mainRoutes: {
+    fr: string;
+    en: string;
+    priority: number;
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  }[] = [
+    { fr: "/fr",  en: "/en",  priority: 1.0, changeFrequency: "weekly"  },
+    { fr: "/fr/confidentialite", en: "/en/privacy", priority: 0.5, changeFrequency: "yearly" },
+    { fr: "/fr/conditions-utilisation", en: "/en/terms", priority: 0.5, changeFrequency: "yearly" },
+  ];
+
+  for (const route of mainRoutes) {
     entries.push({
       url:             `${BASE_URL}${route.fr}`,
       lastModified:    new Date(),
       changeFrequency: route.changeFrequency,
       priority:        route.priority,
     });
-
-    // Version anglaise
     entries.push({
       url:             `${BASE_URL}${route.en}`,
       lastModified:    new Date(),
       changeFrequency: route.changeFrequency,
       priority:        route.priority,
+    });
+  }
+
+  // ── Pages services (10 services × 2 locales) ──────────────
+  for (const slug of SERVICE_SLUGS) {
+    entries.push({
+      url:             `${BASE_URL}/fr/services/${slug}`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.8,
+    });
+    entries.push({
+      url:             `${BASE_URL}/en/services/${slug}`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.8,
     });
   }
 

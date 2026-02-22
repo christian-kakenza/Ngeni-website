@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Link } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { SERVICES, SERVICE_SLUGS, getServiceBySlug } from "@/lib/services-data";
 
@@ -82,15 +81,15 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
 
         <div className="container-max relative z-10 px-4 md:px-8 lg:px-16 xl:px-24">
           {/* Back link */}
-          <Link
-            href="/#services"
+          <a
+            href={`/${locale}#services`}
             className="mb-10 inline-flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-accent"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-4 w-4">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
             {t.back}
-          </Link>
+          </a>
 
           {/* Badge */}
           <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-accent">
@@ -115,21 +114,21 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
 
           {/* CTA buttons */}
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/#contact"
+            <a
+              href={`/${locale}#contact`}
               className="inline-flex items-center gap-2 rounded-xl bg-brand-accent px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-accent/90"
             >
               {t.contactUs}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
-            </Link>
-            <Link
-              href="/#services"
+            </a>
+            <a
+              href={`/${locale}#services`}
               className="inline-flex items-center gap-2 rounded-xl border border-brand-border bg-brand-surface/50 px-6 py-3 text-sm font-semibold text-brand-gray transition-all hover:border-brand-accent/30 hover:text-brand-white"
             >
               {t.exploreServices}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -245,15 +244,15 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
             <p className="relative mt-3 text-brand-gray md:text-lg">
               {content.cta_description}
             </p>
-            <Link
-              href="/#contact"
+            <a
+              href={`/${locale}#contact`}
               className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-brand-accent px-8 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:bg-brand-accent/90"
             >
               {t.contactUs}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

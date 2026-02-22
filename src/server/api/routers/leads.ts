@@ -6,6 +6,7 @@ import {
   adminProcedure,
 } from "@/server/api/trpc";
 import { leadCreateSchema } from "@/lib/validations/lead.schema";
+import { sendLeadNotificationEmail } from "@/lib/email";
 
 export const leadsRouter = createTRPCRouter({
   /**
@@ -49,6 +50,17 @@ export const leadsRouter = createTRPCRouter({
           service: true,
           createdAt: true,
         },
+      });
+
+      // Notification email — silencieuse si RESEND_API_KEY non configuré
+      void sendLeadNotificationEmail({
+        name:    lead.name,
+        email:   lead.email,
+        phone:   input.phone ?? null,
+        company: input.company ?? null,
+        service: lead.service,
+        message: input.message,
+        source:  input.source,
       });
 
       return { success: true, lead };

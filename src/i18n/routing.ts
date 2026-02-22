@@ -46,6 +46,14 @@ export const routing = defineRouting({
       fr: "/tableau-de-bord/profil",
       en: "/dashboard/profile",
     },
+    "/privacy": {
+      fr: "/confidentialite",
+      en: "/privacy",
+    },
+    "/terms": {
+      fr: "/conditions-utilisation",
+      en: "/terms",
+    },
   },
 });
 
