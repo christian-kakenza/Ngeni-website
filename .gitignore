@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Build outputs
+/.next/
+/out/
+/build
+
+# Environment (JAMAIS sur Git)
+.env
+.env.local
+.env.*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma generated
+prisma/dev.db
+prisma/dev.db-journal
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Misc
+.vercel
+*.pem

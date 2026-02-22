@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "title": "NGENI — Solutions IA pour l'Afrique",
+    "description": "NGENI est une agence spécialisée dans l'intelligence artificielle, l'automatisation et le développement SaaS sur mesure pour les entreprises et institutions africaines.",
+    "keywords": "intelligence artificielle, automatisation, SaaS, IA, RDC, Congo, Afrique, développement web"
+  },
+
+  "nav": {
+    "services": "Services",
+    "about": "À propos",
+    "team": "Équipe",
+    "pricing": "Tarifs",
+    "portfolio": "Réalisations",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "Inscription",
+    "dashboard": "Tableau de bord",
+    "logout": "Déconnexion",
+    "menu": "Menu",
+    "close": "Fermer"
+  },
+
+  "hero": {
+    "badge": "Agence IA Africaine #1",
+    "title": "L'Intelligence Artificielle",
+    "title_highlight": "au Service de l'Afrique",
+    "subtitle": "NGENI transforme vos défis en opportunités grâce à des solutions IA sur mesure, conçues pour les entreprises et institutions africaines.",
+    "cta_primary": "Démarrer un projet",
+    "cta_secondary": "Découvrir nos services",
+    "cta_demo": "Voir une démo",
+    "scroll_hint": "Défiler pour explorer",
+    "app_download": {
+      "label": "Téléchargez notre application",
+      "ios": "Télécharger pour iOS",
+      "android": "Télécharger pour Android",
+      "huawei": "Explorer sur AppGallery"
+    },
+    "stats": {
+      "clients": "Clients satisfaits",
+      "projects": "Projets livrés",
+      "countries": "Pays couverts",
+      "uptime": "Disponibilité garantie"
+    }
+  },
+
+  "services": {
+    "title": "Nos",
+    "title_highlight": "Spécialités",
+    "subtitle": "Des solutions IA complètes pour transformer chaque secteur d'activité en Afrique.",
+    "cta": "En savoir plus",
+    "items": {
+      "rpa": {
+        "id": "01",
+        "title": "Automatisation Intelligente des Processus",
+        "subtitle": "RPA & IA",
+        "description": "Conception et déploiement d'agents IA pour automatiser vos tâches répétitives et maximiser la productivité de vos équipes.",
+        "features": {
+          "0": "Agents IA pour tâches répétitives",
+          "1": "Optimisation des workflows (finance, admin, support)",
+          "2": "Surveillance intelligente des processus",
+          "3": "Réduction des erreurs humaines"
+        },
+        "tech": "Node.js · BullMQ · Redis",
+        "tag": "Automatisation"
+      },
+      "agents": {
+        "id": "02",
+        "title": "Création d'Agents IA Personnalisés",
+        "subtitle": "Chatbots & Assistants",
+        "description": "Développement de chatbots et assistants virtuels intelligents pour vos entreprises, institutions et plateformes numériques.",
+        "features": {
+          "0": "Chatbots et assistants virtuels sur mesure",
+          "1": "IA conversationnelle multiplateforme",
+          "2": "Intégration CRM, sites web et applis mobiles",
+          "3": "Automatisation du support client intelligent"
+        },
+        "tech": "tRPC · Next.js · OpenAI",
+        "tag": "IA Conversationnelle"
+      },
+      "saas": {
+        "id": "03",
+        "title": "SaaS sur Mesure",
+        "subtitle": "Plateformes Évolutives",
+        "description": "Développement de plateformes SaaS robustes et scalables pour tous secteurs : éducation, santé, agriculture, électricité et plus.",
+        "features": {
+          "0": "Architecture scalable PostgreSQL + Prisma",
+          "1": "Intégration paiement complète via Stripe",
+          "2": "Gestion sécurisée des utilisateurs (Auth.js)",
+          "3": "Déploiement cloud et maintenance continue"
+        },
+        "tech": "Next.js · Prisma · Stripe",
+        "tag": "Développement SaaS"
+      },
+      "web": {
+        "id": "04",
+        "title": "Développement de Sites Web Professionnels",
+        "subtitle": "Web & Digital",
+        "description": "Création de sites web responsive, performants et optimisés SEO pour les startups et entreprises souhaitant marquer leur présence digitale.",
+        "features": {
+          "0": "UI/UX moderne avec Tailwind et Radix UI",
+          "1": "Optimisation SEO et Core Web Vitals",
+          "2": "Moteur de recherche interne Typesense",
+          "3": "Performance et accessibilité WCAG 2.1"
+        },
+        "tech": "Next.js · Tailwind · Typesense",
+        "tag": "Web Design"
+      },
+      "medical": {
+        "id": "05",
+        "title": "Solutions IA pour le Secteur Médical",
+        "subtitle": "HealthTech & IA",
+        "description": "Analyse de données médicales, détection précoce de pathologies et automatisation des processus administratifs pour les structures de santé.",
+        "features": {
+          "0": "Analyse et détection précoce de pathologies",
+          "1": "Agents IA pour assistance médicale à distance",
+          "2": "Automatisation des dossiers patients",
+          "3": "Génération de rapports médicaux intelligents"
+        },
+        "tech": "Python · TensorFlow · Next.js",
+        "tag": "HealthTech"
+      },
+      "agriculture": {
+        "id": "06",
+        "title": "IA & Automatisation pour l'Agriculture",
+        "subtitle": "AgriTech & IA",
+        "description": "Détection intelligente de maladies des cultures, optimisation logistique et planification automatisée pour maximiser les rendements agricoles.",
+        "features": {
+          "0": "Détection de maladies via vision par ordinateur",
+          "1": "Optimisation de la chaîne logistique",
+          "2": "Planification automatisée de l'irrigation et fertilisation",
+          "3": "Prévision des récoltes par modèles prédictifs"
+        },
+        "tech": "Computer Vision · IoT · IA",
+        "tag": "AgriTech"
+      },
+      "education": {
+        "id": "07",
+        "title": "Solutions IA pour l'Éducation et la Formation",
+        "subtitle": "EduTech & IA",
+        "description": "Plateformes éducatives SaaS pour universités et écoles : gestion de cours, examens et révisions assistées par intelligence artificielle.",
+        "features": {
+          "0": "Plateformes e-learning pour universités et écoles",
+          "1": "Agents IA pour tutorat intelligent et personnalisé",
+          "2": "Analyse des performances pour améliorer l'apprentissage",
+          "3": "Parcours personnalisés par élève"
+        },
+        "tech": "Next.js · Prisma · IA",
+        "tag": "EduTech"
+      },
+      "energy": {
+        "id": "08",
+        "title": "Optimisation Énergétique & Électricité",
+        "subtitle": "EnergyTech & IA",
+        "description": "IA appliquée à la prédiction de consommation énergétique, l'optimisation des réseaux électriques et la maintenance prédictive industrielle.",
+        "features": {
+          "0": "Prédiction de consommation et optimisation réseaux",
+          "1": "Maintenance prédictive pour équipements industriels",
+          "2": "Monitoring intelligent et alertes en temps réel",
+          "3": "Réduction des pertes et optimisation des coûts"
+        },
+        "tech": "IoT · Machine Learning · IA",
+        "tag": "EnergyTech"
+      },
+      "construction": {
+        "id": "09",
+        "title": "Construction et Smart Building",
+        "subtitle": "PropTech & IA",
+        "description": "Agents IA pour la planification intelligente de chantiers, la gestion des stocks et le monitoring automatisé des bâtiments connectés.",
+        "features": {
+          "0": "Planification et suivi intelligent de chantiers",
+          "1": "Automatisation de la gestion des stocks et matériaux",
+          "2": "Monitoring de bâtiments intelligents via IoT + IA",
+          "3": "Optimisation énergétique des infrastructures"
+        },
+        "tech": "IoT · Digital Twin · IA",
+        "tag": "PropTech"
+      },
+      "consulting": {
+        "id": "10",
+        "title": "Conseil et Formation IA pour Entreprises",
+        "subtitle": "Conseil & Formation",
+        "description": "Formation en IA, automatisation et développement SaaS, accompagnement personnalisé et déploiement rapide de prototypes pour les entreprises locales.",
+        "features": {
+          "0": "Formation en IA, automatisation et développement SaaS",
+          "1": "Sessions de mentoring et accompagnement sur mesure",
+          "2": "Déploiement rapide de prototypes et proof-of-concept",
+          "3": "Audit et conseil en transformation digitale"
+        },
+        "tech": "React · Next.js · Node.js · Prisma",
+        "tag": "Consulting"
+      }
+    }
+  },
+
+  "about": {
+    "badge": "Notre Mission",
+    "title": "Propulser l'Afrique",
+    "title_highlight": "par l'Intelligence Artificielle",
+    "subtitle": "NGENI est née d'une conviction : chaque défi africain a une solution technologique. Nous concevons des outils IA sur mesure qui transforment les secteurs clés du continent.",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Des solutions avant-gardistes adaptées aux réalités africaines."
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Protection maximale des données de nos clients et partenaires."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Standards internationaux pour chaque projet livré."
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Des résultats mesurables qui transforment les organisations."
+      }
+    }
+  },
+
+  "process": {
+    "title": "Comment Nous Travaillons",
+    "subtitle": "Un processus éprouvé pour transformer votre vision en réalité.",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Découverte & Analyse",
+        "description": "Nous analysons vos défis, votre secteur et vos objectifs pour concevoir la solution IA idéale."
+      },
+      "design": {
+        "number": "02",
+        "title": "Conception & Architecture",
+        "description": "Nous élaborons l'architecture technique et le design de votre solution avec votre validation à chaque étape."
+      },
+      "development": {
+        "number": "03",
+        "title": "Développement Agile",
+        "description": "Développement itératif avec démonstrations régulières pour garantir l'alignement avec vos attentes."
+      },
+      "launch": {
+        "number": "04",
+        "title": "Déploiement & Support",
+        "description": "Mise en production sécurisée et accompagnement continu pour assurer la pérennité de votre solution."
+      }
+    }
+  },
+
+  "team": {
+    "title": "Équipe",
+    "subtitle": "Des experts passionnés par l'IA et le développement africain.",
+    "roles": {
+      "ceo": "CEO & Fondateur",
+      "cto": "CTO & Architecte IA",
+      "lead_dev": "Lead Developer",
+      "designer": "UX/UI Designer",
+      "ai_engineer": "Ingénieur IA",
+      "pm": "Chef de Projet"
+    }
+  },
+
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "subtitle": "La confiance de nos partenaires, notre plus grande fierté."
+  },
+
+  "portfolio": {
+    "title": "Nos",
+    "title_highlight": "Réalisations",
+    "subtitle": "Des produits conçus, déployés et utilisés en conditions réelles.",
+    "cta": "Voir le projet",
+    "coming_soon": "Image à venir",
+    "projects": {
+      "web": {
+        "category": "Site Web",
+        "title": "Site Vitrine Premium",
+        "description": "Landing page responsive, optimisée SEO, avec formulaire de contact intégré et animations fluides."
+      },
+      "saas": {
+        "category": "SaaS",
+        "title": "Plateforme SaaS IA",
+        "description": "Application web complète avec authentification, tableau de bord analytics et API REST sécurisée."
+      },
+      "automation": {
+        "category": "Automatisation",
+        "title": "Robot RPA Entreprise",
+        "description": "Agent d'automatisation pour la saisie de données, génération de rapports et synchronisation multi-systèmes."
+      }
+    }
+  },
+
+  "pricing": {
+    "title": "Nos Formules",
+    "subtitle": "Des plans adaptés à chaque étape de votre croissance.",
+    "billing": {
+      "monthly": "Mensuel",
+      "annual": "Annuel",
+      "save": "Économisez 20%"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Pour les startups et PME qui débutent leur transformation digitale.",
+        "cta": "Commencer gratuitement"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Pour les entreprises en croissance nécessitant des solutions IA avancées.",
+        "badge": "Le plus populaire",
+        "cta": "Démarrer en Pro"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Solutions sur mesure pour les grandes institutions et entreprises.",
+        "cta": "Nous contacter"
+      }
+    },
+    "features": {
+      "included": "Inclus",
+      "not_included": "Non inclus",
+      "custom": "Sur mesure"
+    }
+  },
+
+  "contact": {
+    "title": "Démarrons Ensemble",
+    "subtitle": "Partagez votre projet et notre équipe vous contacte sous 24h.",
+    "form": {
+      "name": "Nom complet",
+      "name_placeholder": "Jean Mukeba",
+      "email": "Adresse email",
+      "email_placeholder": "jean@entreprise.com",
+      "phone": "Téléphone (optionnel)",
+      "phone_placeholder": "+243 8X X XX XX XX",
+      "company": "Entreprise (optionnel)",
+      "company_placeholder": "Votre entreprise",
+      "service": "Service souhaité",
+      "service_placeholder": "Choisissez un service",
+      "message": "Décrivez votre projet",
+      "message_placeholder": "Parlez-nous de votre projet, vos défis et vos objectifs...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès ! Nous vous répondons sous 24h.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "info": {
+      "email": "contact@ngeni.ai",
+      "location": "Kinshasa, République Démocratique du Congo",
+      "hours": "Lun — Ven, 08:00 — 18:00 (CAT)"
+    }
+  },
+
+  "chatbot": {
+    "title": "Concierge NGENI",
+    "subtitle": "Votre assistant IA personnel",
+    "placeholder": "Posez votre question...",
+    "greeting": "Bonjour ! Je suis le Concierge NGENI. Comment puis-je vous aider aujourd'hui ? 🚀",
+    "thinking": "Réflexion en cours...",
+    "lead_prompt": "Souhaitez-vous qu'un expert vous contacte ?",
+    "lead_cta": "Laisser mes coordonnées",
+    "send": "Envoyer",
+    "close": "Fermer"
+  },
+
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "welcome": "Bienvenue, {name}",
+    "overview": "Vue d'ensemble",
+    "nav": {
+      "overview": "Vue d'ensemble",
+      "projects": "Mes Projets",
+      "tasks": "Tâches",
+      "profile": "Profil",
+      "settings": "Paramètres",
+      "support": "Support"
+    },
+    "stats": {
+      "active_projects": "Projets actifs",
+      "tasks_completed": "Tâches terminées",
+      "in_review": "En révision",
+      "total_budget": "Budget total"
+    },
+    "projects": {
+      "title": "Mes Projets",
+      "empty": "Aucun projet pour le moment.",
+      "empty_sub": "Notre équipe créera votre premier projet très bientôt.",
+      "status": {
+        "IN_PROGRESS": "En cours",
+        "REVIEW": "En révision",
+        "COMPLETED": "Terminé",
+        "PAUSED": "En pause"
+      },
+      "priority": {
+        "LOW": "Faible",
+        "MEDIUM": "Moyen",
+        "HIGH": "Élevé",
+        "URGENT": "Urgent"
+      }
+    },
+    "tasks": {
+      "title": "Tâches",
+      "todo": "À faire",
+      "in_progress": "En cours",
+      "done": "Terminé",
+      "no_tasks": "Aucune tâche assignée."
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Accédez à votre espace client NGENI",
+      "email": "Adresse email",
+      "password": "Mot de passe",
+      "forgot_password": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "no_account": "Pas encore de compte ?",
+      "register_link": "Demander un accès",
+      "error": "Email ou mot de passe incorrect."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Rejoignez l'espace client NGENI",
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "submit": "Créer le compte",
+      "already_account": "Vous avez déjà un compte ?",
+      "login_link": "Se connecter",
+      "error_email": "Cet email est déjà utilisé.",
+      "error_password": "Les mots de passe ne correspondent pas."
+    }
+  },
+
+  "footer": {
+    "tagline": "Propulser l'Afrique par l'Intelligence Artificielle.",
+    "links": {
+      "services": "Services",
+      "about": "À propos",
+      "team": "Équipe",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "dashboard": "Espace client"
+    },
+    "sections": {
+      "company": "Entreprise",
+      "services": "Nos Services",
+      "legal": "Légal",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} NGENI. Tous droits réservés.",
+    "made_in": "Fait avec ❤️ en RDC"
+  },
+
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "all": "Tous",
+    "none": "Aucun",
+    "more": "Voir plus",
+    "less": "Voir moins",
+    "or": "ou",
+    "and": "et",
+    "required": "Champ requis",
+    "optional": "Optionnel"
+  },
+
+  "errors": {
+    "404": {
+      "title": "Page introuvable",
+      "description": "La page que vous cherchez n'existe pas ou a été déplacée.",
+      "cta": "Retour à l'accueil"
+    },
+    "500": {
+      "title": "Erreur serveur",
+      "description": "Une erreur inattendue s'est produite. Nos équipes ont été notifiées.",
+      "cta": "Réessayer"
+    },
+    "403": {
+      "title": "Accès refusé",
+      "description": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",
+      "cta": "Se connecter"
+    }
+  }
+}

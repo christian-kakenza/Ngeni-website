@@ -1,0 +1,20 @@
+# ============================================================
+# WHITEBOXAi — robots.txt
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Zones privées — exclure de l'indexation
+Disallow: /fr/dashboard/
+Disallow: /en/dashboard/
+Disallow: /fr/tableau-de-bord/
+Disallow: /en/tableau-de-bord/
+Disallow: /api/
+Disallow: /fr/connexion
+Disallow: /en/login
+Disallow: /fr/inscription
+Disallow: /en/register
+
+# Sitemap
+Sitemap: http://localhost:3000/sitemap.xml

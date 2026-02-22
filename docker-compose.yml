@@ -1,0 +1,76 @@
+version: "3.8"
+
+# ============================================================
+# WHITEBOXAi — Infrastructure Locale (Développement)
+# Usage : docker compose up -d
+# ============================================================
+
+services:
+
+  # ---- PostgreSQL 15 ----------------------------------------
+  postgres:
+    image: postgres:15-alpine
+    container_name: whitebox_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: whitebox_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d whitebox_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - whitebox_network
+
+  # ---- Redis 7 (Cache + BullMQ) -----------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: whitebox_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --loglevel warning
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - whitebox_network
+
+  # ---- Redis Commander (UI admin Redis, dev uniquement) -----
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: whitebox_redis_ui
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      redis:
+        condition: service_healthy
+    profiles:
+      - dev-tools
+    networks:
+      - whitebox_network
+
+# ---- Volumes persistants ------------------------------------
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+# ---- Réseau partagé ----------------------------------------
+networks:
+  whitebox_network:
+    driver: bridge

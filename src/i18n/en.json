@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "title": "NGENI — AI Solutions for Africa",
+    "description": "NGENI is a specialized AI agency providing automation, custom AI agents, and SaaS development for African businesses and institutions.",
+    "keywords": "artificial intelligence, automation, SaaS, AI, DRC, Congo, Africa, web development"
+  },
+
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "team": "Team",
+    "pricing": "Pricing",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Sign Up",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "menu": "Menu",
+    "close": "Close"
+  },
+
+  "hero": {
+    "badge": "Africa's #1 AI Agency",
+    "title": "Artificial Intelligence",
+    "title_highlight": "Powering Africa's Future",
+    "subtitle": "NGENI transforms your challenges into opportunities with tailor-made AI solutions, built for African businesses and institutions.",
+    "cta_primary": "Start a Project",
+    "cta_secondary": "Explore Our Services",
+    "cta_demo": "Watch a Demo",
+    "scroll_hint": "Scroll to explore",
+    "app_download": {
+      "label": "Download our app",
+      "ios": "Download for iOS",
+      "android": "Download for Android",
+      "huawei": "Explore on AppGallery"
+    },
+    "stats": {
+      "clients": "Happy Clients",
+      "projects": "Projects Delivered",
+      "countries": "Countries Covered",
+      "uptime": "Guaranteed Uptime"
+    }
+  },
+
+  "services": {
+    "title": "Our",
+    "title_highlight": "Specialties",
+    "subtitle": "Comprehensive AI solutions to transform every industry sector across Africa.",
+    "cta": "Learn more",
+    "items": {
+      "rpa": {
+        "id": "01",
+        "title": "Intelligent Process Automation",
+        "subtitle": "RPA & AI",
+        "description": "Design and deployment of AI agents to automate repetitive tasks and maximize your team's productivity.",
+        "features": {
+          "0": "AI agents for repetitive task automation",
+          "1": "Workflow optimization (finance, admin, support)",
+          "2": "Intelligent process monitoring",
+          "3": "Human error reduction"
+        },
+        "tech": "Node.js · BullMQ · Redis",
+        "tag": "Automation"
+      },
+      "agents": {
+        "id": "02",
+        "title": "Custom AI Agent Development",
+        "subtitle": "Chatbots & Assistants",
+        "description": "Development of intelligent chatbots and virtual assistants for businesses, institutions, and digital platforms.",
+        "features": {
+          "0": "Custom chatbots and virtual assistants",
+          "1": "Multi-platform conversational AI",
+          "2": "CRM, website, and mobile app integration",
+          "3": "Intelligent customer support automation"
+        },
+        "tech": "tRPC · Next.js · OpenAI",
+        "tag": "Conversational AI"
+      },
+      "saas": {
+        "id": "03",
+        "title": "Custom SaaS Development",
+        "subtitle": "Scalable Platforms",
+        "description": "Development of robust, scalable SaaS platforms for any sector: education, healthcare, agriculture, energy, and more.",
+        "features": {
+          "0": "Scalable architecture with PostgreSQL + Prisma",
+          "1": "Complete payment integration via Stripe",
+          "2": "Secure user management (Auth.js)",
+          "3": "Cloud deployment and ongoing maintenance"
+        },
+        "tech": "Next.js · Prisma · Stripe",
+        "tag": "SaaS Development"
+      },
+      "web": {
+        "id": "04",
+        "title": "Professional Web Development",
+        "subtitle": "Web & Digital",
+        "description": "Creation of responsive, high-performance, SEO-optimized websites for startups and businesses.",
+        "features": {
+          "0": "Modern UI/UX with Tailwind and Radix UI",
+          "1": "SEO and Core Web Vitals optimization",
+          "2": "Internal search engine with Typesense",
+          "3": "WCAG 2.1 accessibility compliance"
+        },
+        "tech": "Next.js · Tailwind · Typesense",
+        "tag": "Web Design"
+      },
+      "medical": {
+        "id": "05",
+        "title": "AI Solutions for Healthcare",
+        "subtitle": "HealthTech & AI",
+        "description": "Medical data analysis, early disease detection, and administrative process automation for healthcare facilities.",
+        "features": {
+          "0": "Medical data analysis and early disease detection",
+          "1": "AI agents for remote medical assistance",
+          "2": "Patient record automation",
+          "3": "Intelligent medical report generation"
+        },
+        "tech": "Python · TensorFlow · Next.js",
+        "tag": "HealthTech"
+      },
+      "agriculture": {
+        "id": "06",
+        "title": "AI & Automation for Agriculture",
+        "subtitle": "AgriTech & AI",
+        "description": "Intelligent crop disease detection, logistics optimization, and automated planning to maximize agricultural yields.",
+        "features": {
+          "0": "Crop disease detection via computer vision",
+          "1": "Supply chain optimization",
+          "2": "Automated irrigation and fertilization planning",
+          "3": "Predictive harvest forecasting"
+        },
+        "tech": "Computer Vision · IoT · AI",
+        "tag": "AgriTech"
+      },
+      "education": {
+        "id": "07",
+        "title": "AI Solutions for Education & Training",
+        "subtitle": "EduTech & AI",
+        "description": "SaaS educational platforms for universities and schools: AI-assisted course management, exams, and personalized learning.",
+        "features": {
+          "0": "E-learning platforms for universities and schools",
+          "1": "AI agents for intelligent, personalized tutoring",
+          "2": "Performance analytics to improve learning",
+          "3": "Personalized learning pathways per student"
+        },
+        "tech": "Next.js · Prisma · AI",
+        "tag": "EduTech"
+      },
+      "energy": {
+        "id": "08",
+        "title": "Energy Optimization & Electricity",
+        "subtitle": "EnergyTech & AI",
+        "description": "AI applied to energy consumption prediction, electrical grid optimization, and predictive industrial maintenance.",
+        "features": {
+          "0": "Consumption prediction and grid optimization",
+          "1": "Predictive maintenance for industrial equipment",
+          "2": "Intelligent real-time monitoring and alerts",
+          "3": "Loss reduction and cost optimization"
+        },
+        "tech": "IoT · Machine Learning · AI",
+        "tag": "EnergyTech"
+      },
+      "construction": {
+        "id": "09",
+        "title": "Construction & Smart Building",
+        "subtitle": "PropTech & AI",
+        "description": "AI agents for intelligent project planning, inventory management, and automated monitoring of connected buildings.",
+        "features": {
+          "0": "Intelligent construction planning and monitoring",
+          "1": "Inventory and materials management automation",
+          "2": "Smart building monitoring via IoT + AI",
+          "3": "Energy optimization for infrastructure"
+        },
+        "tech": "IoT · Digital Twin · AI",
+        "tag": "PropTech"
+      },
+      "consulting": {
+        "id": "10",
+        "title": "AI Consulting & Training for Businesses",
+        "subtitle": "Consulting & Training",
+        "description": "AI, automation, and SaaS development training, personalized mentoring, and rapid prototype deployment for local businesses.",
+        "features": {
+          "0": "AI, automation, and SaaS development training",
+          "1": "Mentoring and customized support sessions",
+          "2": "Rapid prototype and proof-of-concept deployment",
+          "3": "Digital transformation audit and consulting"
+        },
+        "tech": "React · Next.js · Node.js · Prisma",
+        "tag": "Consulting"
+      }
+    }
+  },
+
+  "about": {
+    "badge": "Our Mission",
+    "title": "Empowering Africa",
+    "title_highlight": "Through Artificial Intelligence",
+    "subtitle": "NGENI was born from a conviction: every African challenge has a technological solution. We design custom AI tools that transform key sectors of the continent.",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Forward-thinking solutions adapted to African realities."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Maximum data protection for our clients and partners."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "International standards for every delivered project."
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Measurable results that transform organizations."
+      }
+    }
+  },
+
+  "process": {
+    "title": "How We Work",
+    "subtitle": "A proven process to turn your vision into reality.",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Discovery & Analysis",
+        "description": "We analyze your challenges, industry, and goals to design the ideal AI solution."
+      },
+      "design": {
+        "number": "02",
+        "title": "Design & Architecture",
+        "description": "We build the technical architecture and design of your solution with your validation at every step."
+      },
+      "development": {
+        "number": "03",
+        "title": "Agile Development",
+        "description": "Iterative development with regular demos to ensure alignment with your expectations."
+      },
+      "launch": {
+        "number": "04",
+        "title": "Deployment & Support",
+        "description": "Secure production deployment and ongoing support to ensure the longevity of your solution."
+      }
+    }
+  },
+
+  "team": {
+    "title": "Team",
+    "subtitle": "Experts passionate about AI and African development.",
+    "roles": {
+      "ceo": "CEO & Founder",
+      "cto": "CTO & AI Architect",
+      "lead_dev": "Lead Developer",
+      "designer": "UX/UI Designer",
+      "ai_engineer": "AI Engineer",
+      "pm": "Project Manager"
+    }
+  },
+
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "The trust of our partners is our greatest achievement."
+  },
+
+  "portfolio": {
+    "title": "Our",
+    "title_highlight": "Showcase",
+    "subtitle": "Products designed, deployed and used in real-world conditions.",
+    "cta": "View project",
+    "coming_soon": "Image coming soon",
+    "projects": {
+      "web": {
+        "category": "Web",
+        "title": "Premium Landing Page",
+        "description": "Responsive, SEO-optimized landing page with integrated contact form and smooth animations."
+      },
+      "saas": {
+        "category": "SaaS",
+        "title": "AI SaaS Platform",
+        "description": "Full-stack web application with authentication, analytics dashboard and secured REST API."
+      },
+      "automation": {
+        "category": "Automation",
+        "title": "Enterprise RPA Bot",
+        "description": "Automation agent for data entry, report generation and multi-system synchronization."
+      }
+    }
+  },
+
+  "pricing": {
+    "title": "Our Plans",
+    "subtitle": "Tailored plans for every stage of your growth.",
+    "billing": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "save": "Save 20%"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "For startups and SMEs beginning their digital transformation.",
+        "cta": "Start for free"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For growing businesses requiring advanced AI solutions.",
+        "badge": "Most popular",
+        "cta": "Start with Pro"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solutions for large institutions and enterprises.",
+        "cta": "Contact us"
+      }
+    },
+    "features": {
+      "included": "Included",
+      "not_included": "Not included",
+      "custom": "Custom"
+    }
+  },
+
+  "contact": {
+    "title": "Let's Build Together",
+    "subtitle": "Share your project and our team will reach out within 24 hours.",
+    "form": {
+      "name": "Full name",
+      "name_placeholder": "John Smith",
+      "email": "Email address",
+      "email_placeholder": "john@company.com",
+      "phone": "Phone (optional)",
+      "phone_placeholder": "+27 XX XXX XXXX",
+      "company": "Company (optional)",
+      "company_placeholder": "Your company",
+      "service": "Desired service",
+      "service_placeholder": "Choose a service",
+      "message": "Describe your project",
+      "message_placeholder": "Tell us about your project, challenges, and goals...",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We'll respond within 24 hours.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "email": "contact@ngeni.ai",
+      "location": "Kinshasa, Democratic Republic of Congo",
+      "hours": "Mon — Fri, 08:00 — 18:00 (CAT)"
+    }
+  },
+
+  "chatbot": {
+    "title": "NGENI Concierge",
+    "subtitle": "Your personal AI assistant",
+    "placeholder": "Ask your question...",
+    "greeting": "Hello! I'm the NGENI Concierge. How can I help you today? 🚀",
+    "thinking": "Thinking...",
+    "lead_prompt": "Would you like an expert to contact you?",
+    "lead_cta": "Leave my contact details",
+    "send": "Send",
+    "close": "Close"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}",
+    "overview": "Overview",
+    "nav": {
+      "overview": "Overview",
+      "projects": "My Projects",
+      "tasks": "Tasks",
+      "profile": "Profile",
+      "settings": "Settings",
+      "support": "Support"
+    },
+    "stats": {
+      "active_projects": "Active projects",
+      "tasks_completed": "Tasks completed",
+      "in_review": "In review",
+      "total_budget": "Total budget"
+    },
+    "projects": {
+      "title": "My Projects",
+      "empty": "No projects yet.",
+      "empty_sub": "Our team will create your first project very soon.",
+      "status": {
+        "IN_PROGRESS": "In Progress",
+        "REVIEW": "In Review",
+        "COMPLETED": "Completed",
+        "PAUSED": "Paused"
+      },
+      "priority": {
+        "LOW": "Low",
+        "MEDIUM": "Medium",
+        "HIGH": "High",
+        "URGENT": "Urgent"
+      }
+    },
+    "tasks": {
+      "title": "Tasks",
+      "todo": "To Do",
+      "in_progress": "In Progress",
+      "done": "Done",
+      "no_tasks": "No tasks assigned."
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Access your NGENI client portal",
+      "email": "Email address",
+      "password": "Password",
+      "forgot_password": "Forgot password?",
+      "submit": "Sign in",
+      "no_account": "Don't have an account?",
+      "register_link": "Request access",
+      "error": "Incorrect email or password."
+    },
+    "register": {
+      "title": "Create an Account",
+      "subtitle": "Join the NGENI client portal",
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "confirm_password": "Confirm password",
+      "submit": "Create account",
+      "already_account": "Already have an account?",
+      "login_link": "Sign in",
+      "error_email": "This email is already in use.",
+      "error_password": "Passwords do not match."
+    }
+  },
+
+  "footer": {
+    "tagline": "Powering Africa through Artificial Intelligence.",
+    "links": {
+      "services": "Services",
+      "about": "About",
+      "team": "Team",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "dashboard": "Client Portal"
+    },
+    "sections": {
+      "company": "Company",
+      "services": "Our Services",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} NGENI. All rights reserved.",
+    "made_in": "Made with ❤️ in DRC"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "more": "Show more",
+    "less": "Show less",
+    "or": "or",
+    "and": "and",
+    "required": "Required field",
+    "optional": "Optional"
+  },
+
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "cta": "Back to Home"
+    },
+    "500": {
+      "title": "Server Error",
+      "description": "An unexpected error occurred. Our teams have been notified.",
+      "cta": "Try Again"
+    },
+    "403": {
+      "title": "Access Denied",
+      "description": "You don't have the necessary permissions to access this page.",
+      "cta": "Sign In"
+    }
+  }
+}

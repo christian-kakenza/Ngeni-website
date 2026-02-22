@@ -1,0 +1,127 @@
+// WHITEBOXAi — Schéma Prisma
+// LOCAL  : SQLite  (provider = "sqlite", pas d'installation requise)
+// PROD   : PostgreSQL (provider = "postgresql" + vraie DATABASE_URL)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // LOCAL  : SQLite  — aucune installation requise
+  // PROD   : changer en "postgresql" + mettre à jour DATABASE_URL
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// MODÈLES CORE — WHITEBOXAi
+// Note : SQLite ne supporte pas les enums Prisma.
+// Les valeurs acceptées sont documentées en commentaire.
+// En production (PostgreSQL) on peut les remettre en enum.
+// ============================================================
+
+// Role       : "ADMIN" | "CLIENT" | "GUEST"
+// ProjectStatus : "IN_PROGRESS" | "REVIEW" | "COMPLETED" | "PAUSED"
+// TaskStatus : "TODO" | "IN_PROGRESS" | "DONE"
+// Priority   : "LOW" | "MEDIUM" | "HIGH" | "URGENT"
+
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String?
+  image        String?
+  role         String    @default("CLIENT")
+  projects     Project[]
+  accounts     Account[]
+  sessions     Session[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model Project {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  status      String    @default("IN_PROGRESS")
+  client      User      @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  clientId    String
+  tasks       Task[]
+  startDate   DateTime?
+  endDate     DateTime?
+  budget      Float?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("projects")
+}
+
+model Task {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  status      String    @default("TODO")
+  priority    String    @default("MEDIUM")
+  project     Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId   String
+  dueDate     DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("tasks")
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String
+  service   String?
+  source    String   @default("chatbot")
+  createdAt DateTime @default(now())
+
+  @@map("leads")
+}
+
+// Auth.js — Tables requises par @auth/prisma-adapter
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
