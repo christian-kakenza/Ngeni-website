@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { RegisterForm } from "@/components/auth/RegisterForm";
+import { LoginBackdrop } from "@/components/auth/LoginBackdrop";
 
 // ============================================================
 // Register Page — Server Component
@@ -26,6 +28,9 @@ export default async function RegisterPage({
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-brand-black px-4 py-12">
+      {/* Backdrop — clic en dehors de la carte = retour arrière */}
+      <LoginBackdrop />
+
       {/* Ambient glows */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-accent/[0.06] blur-[160px]" />
@@ -36,11 +41,8 @@ export default async function RegisterPage({
       <div className="relative z-10 w-full max-w-md">
         {/* Logo */}
         <div className="mb-8 text-center">
-          <Link
-            href="/"
-            className="inline-block text-2xl font-black tracking-tight text-brand-white transition-opacity hover:opacity-80"
-          >
-            NGE<span className="text-brand-accent">NI</span>
+          <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+            <Image src="/logo.svg" alt="Ngeni" width={140} height={36} className="h-9 w-auto" />
           </Link>
         </div>
 
@@ -61,7 +63,7 @@ export default async function RegisterPage({
 
         {/* Footer note */}
         <p className="mt-6 text-center text-xs text-brand-gray/40">
-          © {new Date().getFullYear()} NGENI —{" "}
+          © {new Date().getFullYear()} Ngeni —{" "}
           {locale === "fr"
             ? "Inscription sécurisée · Rôle CLIENT par défaut"
             : "Secure registration · CLIENT role by default"}
