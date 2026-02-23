@@ -44,6 +44,24 @@ const TESTIMONIALS = [
   },
 ] as const;
 
+// ---- Bold "NGENI" helper ------------------------------------
+
+function BoldNGENI({ text }: { text: string }) {
+  const parts = text.split("NGENI");
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && (
+            <strong className="font-bold text-brand-white">NGENI</strong>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
+
 // ---- Sub-components ----------------------------------------
 
 function StarRating({ count }: { count: number }) {
@@ -75,7 +93,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Content */}
       <blockquote className="mt-4 text-sm leading-relaxed text-brand-white/90 md:text-base">
-        &ldquo;{testimonial.content}&rdquo;
+        &ldquo;<BoldNGENI text={testimonial.content} />&rdquo;
       </blockquote>
 
       {/* Author */}
@@ -142,6 +160,20 @@ export function Testimonials() {
     clearTimeout(resumeTimer.current);
   };
 
+  const scrollPrev = () => {
+    if (!trackRef.current) return;
+    pause();
+    trackRef.current.scrollBy({ left: -365, behavior: "smooth" });
+    resume(1500);
+  };
+
+  const scrollNext = () => {
+    if (!trackRef.current) return;
+    pause();
+    trackRef.current.scrollBy({ left: 365, behavior: "smooth" });
+    resume(1500);
+  };
+
   const resume = (delay = 0) => {
     clearTimeout(resumeTimer.current);
     if (delay > 0) {
@@ -199,6 +231,28 @@ export function Testimonials() {
               <TestimonialCard key={i} testimonial={testimonial} />
             ))}
           </div>
+        </div>
+
+        {/* Mobile navigation arrows — hidden on md+ */}
+        <div className="container-max mt-6 flex justify-center gap-4 md:hidden">
+          <button
+            onClick={scrollPrev}
+            aria-label="Témoignage précédent"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-brand-gray transition-all hover:border-brand-accent/30 hover:text-brand-white"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={scrollNext}
+            aria-label="Témoignage suivant"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-brand-gray transition-all hover:border-brand-accent/30 hover:text-brand-white"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
