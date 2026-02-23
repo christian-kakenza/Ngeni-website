@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { LoginForm } from "@/components/auth/LoginForm";
@@ -39,11 +40,8 @@ export default async function LoginPage({
       <div className="relative z-10 w-full max-w-md">
         {/* Logo */}
         <div className="mb-8 text-center">
-          <Link
-            href="/"
-            className="inline-block text-2xl font-black tracking-tight text-brand-white transition-opacity hover:opacity-80"
-          >
-            NGE<span className="text-brand-accent">NI</span>
+          <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+            <Image src="/logo.svg" alt="Ngeni" width={140} height={36} className="h-9 w-auto" />
           </Link>
         </div>
 

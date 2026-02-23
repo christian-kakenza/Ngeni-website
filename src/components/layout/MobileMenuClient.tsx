@@ -107,7 +107,7 @@ export function MobileMenuClient({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed right-0 top-16 z-50 flex h-[calc(100dvh-4rem)] w-72 flex-col border-l border-brand-border bg-brand-dark md:hidden"
+              className="fixed right-0 top-16 z-50 flex h-auto w-72 flex-col border-l border-b border-brand-border bg-brand-dark md:hidden"
             >
               {/* Navigation links */}
               <nav className="flex flex-col gap-1 p-6">
