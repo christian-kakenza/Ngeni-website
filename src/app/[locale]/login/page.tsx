@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { LoginForm } from "@/components/auth/LoginForm";
+import { LoginBackdrop } from "@/components/auth/LoginBackdrop";
 
 // ============================================================
 // Login Page — Server Component
@@ -30,6 +31,9 @@ export default async function LoginPage({
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-brand-black px-4 py-12">
+      {/* Backdrop — clic en dehors de la carte = retour arrière */}
+      <LoginBackdrop />
+
       {/* Ambient glows */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-accent/[0.06] blur-[160px]" />
