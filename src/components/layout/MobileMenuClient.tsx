@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -29,17 +29,12 @@ export function MobileMenuClient({
   dashboardLabel,
 }: MobileMenuClientProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const drawerRef = useRef<HTMLElement>(null);
 
   // Bloque le scroll quand le menu est ouvert
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   // Ferme le menu sur la touche Échap
@@ -51,9 +46,23 @@ export function MobileMenuClient({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const close = () => {
-    setIsOpen(false);
-  };
+  // Ferme le menu au clic/touch EN DEHORS du drawer (mobile + desktop)
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("touchstart", handleOutside, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener("touchstart", handleOutside);
+    };
+  }, [isOpen]);
+
+  const close = () => setIsOpen(false);
 
   return (
     <>
@@ -95,7 +104,6 @@ export function MobileMenuClient({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              onClick={close}
               className="fixed inset-0 top-16 z-40 bg-brand-black/80 backdrop-blur-sm md:hidden"
               aria-hidden="true"
             />
@@ -103,11 +111,12 @@ export function MobileMenuClient({
             {/* Panneau latéral */}
             <motion.aside
               key="drawer"
+              ref={drawerRef}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed right-0 top-16 z-50 flex h-auto w-72 flex-col border-l border-b border-brand-border bg-brand-dark md:hidden"
+              className="fixed right-0 top-16 z-50 flex h-auto w-72 flex-col rounded-bl-2xl border-b border-l border-brand-border bg-brand-dark md:hidden"
             >
               {/* Navigation links */}
               <nav className="flex flex-col gap-1 p-6">
@@ -118,7 +127,6 @@ export function MobileMenuClient({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.04 }}
                   >
-                    {/* ── Lien ── */}
                     <a
                       href={link.href}
                       onClick={close}
