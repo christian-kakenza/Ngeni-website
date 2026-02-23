@@ -110,7 +110,7 @@ export function MobileMenuClient({
               className="fixed right-0 top-16 z-50 flex h-[calc(100dvh-4rem)] w-72 flex-col border-l border-brand-border bg-brand-dark md:hidden"
             >
               {/* Navigation links */}
-              <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-6">
+              <nav className="flex flex-col gap-1 p-6">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.href}
