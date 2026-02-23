@@ -4,7 +4,6 @@
     "description": "NGENI is a specialized AI agency providing automation, custom AI agents, and SaaS development for African businesses and institutions.",
     "keywords": "artificial intelligence, automation, SaaS, AI, DRC, Congo, Africa, web development"
   },
-
   "nav": {
     "services": "Services",
     "about": "About",
@@ -17,9 +16,9 @@
     "dashboard": "Dashboard",
     "logout": "Logout",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "home": "Home"
   },
-
   "hero": {
     "badge": "Africa's #1 AI Agency",
     "title": "Artificial Intelligence",
@@ -42,7 +41,6 @@
       "uptime": "Guaranteed Uptime"
     }
   },
-
   "services": {
     "title": "Our",
     "title_highlight": "Specialties",
@@ -191,7 +189,6 @@
       }
     }
   },
-
   "about": {
     "badge": "Our Mission",
     "title": "Empowering Africa",
@@ -216,7 +213,6 @@
       }
     }
   },
-
   "process": {
     "title": "How We Work",
     "subtitle": "A proven process to turn your vision into reality.",
@@ -243,7 +239,6 @@
       }
     }
   },
-
   "team": {
     "title": "Team",
     "subtitle": "Experts passionate about AI and African development.",
@@ -256,12 +251,10 @@
       "pm": "Project Manager"
     }
   },
-
   "testimonials": {
     "title": "What Our Clients Say",
     "subtitle": "The trust of our partners is our greatest achievement."
   },
-
   "portfolio": {
     "title": "Our",
     "title_highlight": "Showcase",
@@ -286,7 +279,6 @@
       }
     }
   },
-
   "pricing": {
     "title": "Our Plans",
     "subtitle": "Tailored plans for every stage of your growth.",
@@ -319,7 +311,6 @@
       "custom": "Custom"
     }
   },
-
   "contact": {
     "title": "Let's Build Together",
     "subtitle": "Share your project and our team will reach out within 24 hours.",
@@ -347,7 +338,6 @@
       "hours": "Mon — Fri, 08:00 — 18:00 (CAT)"
     }
   },
-
   "chatbot": {
     "title": "NGENI Concierge",
     "subtitle": "Your personal AI assistant",
@@ -359,7 +349,6 @@
     "send": "Send",
     "close": "Close"
   },
-
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welcome, {name}",
@@ -403,7 +392,6 @@
       "no_tasks": "No tasks assigned."
     }
   },
-
   "auth": {
     "login": {
       "title": "Login",
@@ -430,7 +418,6 @@
       "error_password": "Passwords do not match."
     }
   },
-
   "footer": {
     "tagline": "Powering Africa through Artificial Intelligence.",
     "links": {
@@ -451,7 +438,6 @@
     "copyright": "© {year} NGENI. All rights reserved.",
     "made_in": "Made with ❤️ in DRC"
   },
-
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -479,8 +465,12 @@
     "required": "Required field",
     "optional": "Optional"
   },
-
   "errors": {
+    "403": {
+      "title": "Access Denied",
+      "description": "You don't have the necessary permissions to access this page.",
+      "cta": "Sign In"
+    },
     "404": {
       "title": "Page Not Found",
       "description": "The page you're looking for doesn't exist or has been moved.",
@@ -490,11 +480,6 @@
       "title": "Server Error",
       "description": "An unexpected error occurred. Our teams have been notified.",
       "cta": "Try Again"
-    },
-    "403": {
-      "title": "Access Denied",
-      "description": "You don't have the necessary permissions to access this page.",
-      "cta": "Sign In"
     }
   }
 }

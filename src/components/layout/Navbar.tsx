@@ -37,6 +37,7 @@ export async function Navbar({ locale }: NavbarProps) {
   // Liens de navigation — sections de la Landing Page (hash links)
   // #services est géré par ServicesNavMenu sur desktop ; gardé ici pour mobile
   const navLinks = [
+    { href: `/${locale}`, label: t("home"), mobileOnly: true },
     { href: "#services", label: t("services"), isHash: true },
     { href: "#about", label: t("about"), isHash: true },
     { href: "#team", label: t("team"), isHash: true },
@@ -72,9 +73,9 @@ export async function Navbar({ locale }: NavbarProps) {
           {/* Mega-Menu Spécialités — remplace le lien simple #services */}
           <ServicesNavMenu services={serviceItems} label={t("services")} />
 
-          {/* Autres liens — #services exclu (géré par ServicesNavMenu) */}
+          {/* Autres liens — #services et mobileOnly exclus */}
           {navLinks
-            .filter((link) => link.href !== "#services")
+            .filter((link) => link.href !== "#services" && !link.mobileOnly)
             .map((link) => (
               <a
                 key={link.href}

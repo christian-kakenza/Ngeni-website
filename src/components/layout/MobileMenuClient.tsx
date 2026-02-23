@@ -11,6 +11,7 @@ type NavLink = {
   href: string;
   label: string;
   isHash?: boolean;
+  mobileOnly?: boolean;
 };
 
 type MobileMenuClientProps = {

@@ -4,7 +4,6 @@
     "description": "NGENI est une agence spécialisée dans l'intelligence artificielle, l'automatisation et le développement SaaS sur mesure pour les entreprises et institutions africaines.",
     "keywords": "intelligence artificielle, automatisation, SaaS, IA, RDC, Congo, Afrique, développement web"
   },
-
   "nav": {
     "services": "Services",
     "about": "À propos",
@@ -17,9 +16,9 @@
     "dashboard": "Tableau de bord",
     "logout": "Déconnexion",
     "menu": "Menu",
-    "close": "Fermer"
+    "close": "Fermer",
+    "home": "Accueil"
   },
-
   "hero": {
     "badge": "Agence IA Africaine #1",
     "title": "L'Intelligence Artificielle",
@@ -42,7 +41,6 @@
       "uptime": "Disponibilité garantie"
     }
   },
-
   "services": {
     "title": "Nos",
     "title_highlight": "Spécialités",
@@ -191,7 +189,6 @@
       }
     }
   },
-
   "about": {
     "badge": "Notre Mission",
     "title": "Propulser l'Afrique",
@@ -216,7 +213,6 @@
       }
     }
   },
-
   "process": {
     "title": "Comment Nous Travaillons",
     "subtitle": "Un processus éprouvé pour transformer votre vision en réalité.",
@@ -243,7 +239,6 @@
       }
     }
   },
-
   "team": {
     "title": "Équipe",
     "subtitle": "Des experts passionnés par l'IA et le développement africain.",
@@ -256,12 +251,10 @@
       "pm": "Chef de Projet"
     }
   },
-
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
     "subtitle": "La confiance de nos partenaires, notre plus grande fierté."
   },
-
   "portfolio": {
     "title": "Nos",
     "title_highlight": "Réalisations",
@@ -286,7 +279,6 @@
       }
     }
   },
-
   "pricing": {
     "title": "Nos Formules",
     "subtitle": "Des plans adaptés à chaque étape de votre croissance.",
@@ -319,7 +311,6 @@
       "custom": "Sur mesure"
     }
   },
-
   "contact": {
     "title": "Démarrons Ensemble",
     "subtitle": "Partagez votre projet et notre équipe vous contacte sous 24h.",
@@ -347,7 +338,6 @@
       "hours": "Lun — Ven, 08:00 — 18:00 (CAT)"
     }
   },
-
   "chatbot": {
     "title": "Concierge NGENI",
     "subtitle": "Votre assistant IA personnel",
@@ -359,7 +349,6 @@
     "send": "Envoyer",
     "close": "Fermer"
   },
-
   "dashboard": {
     "title": "Tableau de Bord",
     "welcome": "Bienvenue, {name}",
@@ -403,7 +392,6 @@
       "no_tasks": "Aucune tâche assignée."
     }
   },
-
   "auth": {
     "login": {
       "title": "Connexion",
@@ -430,7 +418,6 @@
       "error_password": "Les mots de passe ne correspondent pas."
     }
   },
-
   "footer": {
     "tagline": "Propulser l'Afrique par l'Intelligence Artificielle.",
     "links": {
@@ -451,7 +438,6 @@
     "copyright": "© {year} NGENI. Tous droits réservés.",
     "made_in": "Fait avec ❤️ en RDC"
   },
-
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
@@ -479,8 +465,12 @@
     "required": "Champ requis",
     "optional": "Optionnel"
   },
-
   "errors": {
+    "403": {
+      "title": "Accès refusé",
+      "description": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",
+      "cta": "Se connecter"
+    },
     "404": {
       "title": "Page introuvable",
       "description": "La page que vous cherchez n'existe pas ou a été déplacée.",
@@ -490,11 +480,6 @@
       "title": "Erreur serveur",
       "description": "Une erreur inattendue s'est produite. Nos équipes ont été notifiées.",
       "cta": "Réessayer"
-    },
-    "403": {
-      "title": "Accès refusé",
-      "description": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",
-      "cta": "Se connecter"
     }
   }
 }
