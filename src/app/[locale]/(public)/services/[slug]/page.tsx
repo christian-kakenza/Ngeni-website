@@ -63,6 +63,24 @@ const ui = {
   },
 };
 
+// ---- Bold "Ngeni" helper ------------------------------------
+
+function BoldNgeni({ text }: { text: string }) {
+  const parts = text.split("NGENI");
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && (
+            <strong className="font-bold text-brand-white">Ngeni</strong>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
+
 // ---- Page Component ----------------------------------------
 
 export default function ServicePage({ params: { locale, slug } }: ServicePageProps) {
@@ -109,7 +127,7 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
 
           {/* Description */}
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-gray">
-            {content.hero_description}
+            <BoldNgeni text={content.hero_description} />
           </p>
 
           {/* CTA buttons */}
@@ -157,7 +175,7 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
               <div className="mt-4 space-y-4">
                 {content.overview.split("\n\n").map((paragraph, i) => (
                   <p key={i} className="leading-relaxed text-brand-gray">
-                    {paragraph}
+                    <BoldNgeni text={paragraph} />
                   </p>
                 ))}
               </div>
@@ -177,7 +195,7 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
               <div className="space-y-4">
                 {content.africa.split("\n\n").map((paragraph, i) => (
                   <p key={i} className="text-sm leading-relaxed text-brand-gray">
-                    {paragraph}
+                    <BoldNgeni text={paragraph} />
                   </p>
                 ))}
               </div>
@@ -199,7 +217,7 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
                 className="group rounded-2xl border border-brand-border bg-brand-surface/30 p-5 backdrop-blur-sm transition-all duration-300 hover:border-brand-accent/30 hover:bg-brand-surface/50"
               >
                 <h3 className="font-semibold text-brand-white">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-gray">{feature.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-brand-gray"><BoldNgeni text={feature.description} /></p>
               </div>
             ))}
           </div>
@@ -238,7 +256,7 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
               {content.cta_title}
             </h2>
             <p className="relative mt-3 text-brand-gray md:text-lg">
-              {content.cta_description}
+              <BoldNgeni text={content.cta_description} />
             </p>
             <a
               href={`/${locale}#contact`}

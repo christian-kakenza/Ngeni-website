@@ -235,9 +235,6 @@ export async function Footer({ locale }: FooterProps) {
           <span>
             {t("copyright", { year: String(currentYear) })}
           </span>
-          <span className="flex items-center gap-1">
-            {t("made_in")}
-          </span>
         </div>
       </div>
     </footer>
