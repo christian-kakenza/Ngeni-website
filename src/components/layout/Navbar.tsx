@@ -57,10 +57,10 @@ export async function Navbar({ locale }: NavbarProps) {
           <Image
             src="/logo.svg"
             alt="NGENI"
-            width={120}
-            height={31}
+            width={160}
+            height={41}
             priority
-            className="h-8 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </Link>
 

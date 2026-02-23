@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { SidebarNav } from "./SidebarNav";
 import { TopBar } from "./TopBar";
@@ -52,11 +53,8 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
       >
         {/* Logo */}
         <div className="flex h-14 shrink-0 items-center border-b border-brand-border px-5">
-          <Link
-            href="/"
-            className="text-lg font-black tracking-tight text-brand-white transition-opacity hover:opacity-80"
-          >
-            WHITE<span className="text-brand-accent">BOX</span>Ai
+          <Link href="/" className="transition-opacity hover:opacity-80">
+            <Image src="/logo.svg" alt="Ngeni" width={120} height={31} className="h-7 w-auto" />
           </Link>
         </div>
 

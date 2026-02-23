@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Sora, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,8 +10,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { SmoothScrollHandler } from "@/components/SmoothScrollHandler";
 import "@/styles/globals.css";
 
-// ── Police "Plus Jakarta Sans" — géométrique, moderne, premium ──
-const fontSans = Plus_Jakarta_Sans({
+// ── Police "Sora" — géométrique, moderne, premium ──
+const fontSans = Sora({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",

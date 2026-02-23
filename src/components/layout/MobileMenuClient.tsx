@@ -24,13 +24,11 @@ type MobileMenuClientProps = {
 
 export function MobileMenuClient({
   navLinks,
-  serviceItems,
   isLoggedIn,
   loginLabel,
   dashboardLabel,
 }: MobileMenuClientProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   // Bloque le scroll quand le menu est ouvert
   useEffect(() => {
@@ -55,7 +53,6 @@ export function MobileMenuClient({
 
   const close = () => {
     setIsOpen(false);
-    setServicesOpen(false);
   };
 
   return (
@@ -121,86 +118,14 @@ export function MobileMenuClient({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.04 }}
                   >
-                    {/* ── Lien Services → accordion ── */}
-                    {link.href === "#services" && serviceItems.length > 0 ? (
-                      <div>
-                        {/* Trigger accordion */}
-                        <button
-                          onClick={() => setServicesOpen((v) => !v)}
-                          className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-brand-gray transition-all hover:bg-brand-surface hover:text-white"
-                          aria-expanded={servicesOpen}
-                        >
-                          <span>{link.label}</span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            className={cn(
-                              "h-4 w-4 transition-transform duration-200",
-                              servicesOpen && "rotate-180"
-                            )}
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-
-                        {/* Liste des services — animée */}
-                        <AnimatePresence initial={false}>
-                          {servicesOpen && (
-                            <motion.div
-                              key="services-list"
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.22, ease: "easeInOut" }}
-                              className="overflow-hidden"
-                            >
-                              <ul className="mt-1 flex flex-col gap-0.5 pb-2 pl-2">
-                                {serviceItems.map((service) => (
-                                  <li key={service.slug}>
-                                    <Link
-                                      href={`/services/${service.slug}` as "/"}
-                                      onClick={close}
-                                      className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm text-brand-gray/80 transition-all hover:bg-brand-surface hover:text-white"
-                                    >
-                                      {/* Puce accent */}
-                                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-accent/50" />
-                                      <span className="truncate">{service.title}</span>
-                                      {/* Badge compact */}
-                                      <span className="ml-auto shrink-0 rounded-full bg-brand-accent/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-brand-accent">
-                                        {service.badge}
-                                      </span>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ) : (
-                      /* ── Lien normal ── */
-                      <>
-                        {link.isHash ? (
-                          <a
-                            href={link.href}
-                            onClick={close}
-                            className="flex items-center rounded-xl px-4 py-3 text-brand-gray transition-all hover:bg-brand-surface hover:text-white"
-                          >
-                            {link.label}
-                          </a>
-                        ) : (
-                          <Link
-                            href={link.href as "/"}
-                            onClick={close}
-                            className="flex items-center rounded-xl px-4 py-3 text-brand-gray transition-all hover:bg-brand-surface hover:text-white"
-                          >
-                            {link.label}
-                          </Link>
-                        )}
-                      </>
-                    )}
+                    {/* ── Lien ── */}
+                    <a
+                      href={link.href}
+                      onClick={close}
+                      className="flex items-center rounded-xl px-4 py-3 text-brand-gray transition-all hover:bg-brand-surface hover:text-white"
+                    >
+                      {link.label}
+                    </a>
                   </motion.div>
                 ))}
               </nav>

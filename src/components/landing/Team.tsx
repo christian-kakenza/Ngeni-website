@@ -15,7 +15,7 @@ const TEAM_MEMBERS = [
     initials: "CK",
     accentFrom: "from-brand-accent",
     accentTo: "to-[#1f6feb]",
-    socials: { linkedin: null as string | null, github: null as string | null, twitter: null as string | null },
+    socials: { linkedin: "#" as string | null, github: "#" as string | null, twitter: "#" as string | null },
   },
   {
     name: "Jade Mabaso",
@@ -24,7 +24,7 @@ const TEAM_MEMBERS = [
     initials: "JM",
     accentFrom: "from-violet-500",
     accentTo: "to-brand-accent",
-    socials: { linkedin: null as string | null, github: null as string | null, twitter: null as string | null },
+    socials: { linkedin: "#" as string | null, github: "#" as string | null, twitter: "#" as string | null },
   },
   {
     name: "David Nsapu",
@@ -33,9 +33,27 @@ const TEAM_MEMBERS = [
     initials: "DN",
     accentFrom: "from-emerald-500",
     accentTo: "to-brand-accent",
-    socials: { linkedin: null as string | null, github: null as string | null, twitter: null as string | null },
+    socials: { linkedin: "#" as string | null, github: "#" as string | null, twitter: "#" as string | null },
   },
 ];
+
+// ---- Bold "Ngeni" helper ------------------------------------
+
+function BoldNgeni({ text }: { text: string }) {
+  const parts = text.split("NGENI");
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && (
+            <strong className="font-bold text-brand-white">Ngeni</strong>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
 
 // ---- Social icons ------------------------------------------
 
@@ -95,7 +113,7 @@ export async function Team({ locale }: TeamProps) {
               <p className="mt-0.5 text-xs font-semibold uppercase tracking-wider text-brand-accent">
                 {t(`roles.${role}`)}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-brand-gray">{bio}</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-gray"><BoldNgeni text={bio} /></p>
 
               {/* Divider */}
               <div className="mt-4 h-px bg-gradient-to-r from-brand-accent/20 to-transparent" />

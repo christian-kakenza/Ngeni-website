@@ -84,7 +84,7 @@ export async function Hero({ locale }: HeroProps) {
         </div>
 
         {/* Headline */}
-        <h1 className="mx-auto max-w-5xl animate-fade-up text-5xl font-bold leading-[1.1] tracking-[-0.04em] text-brand-white md:text-7xl md:tracking-[-0.05em] lg:text-[88px] lg:tracking-[-0.055em]">
+        <h1 className="mx-auto max-w-5xl animate-fade-up text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-brand-white md:text-5xl md:tracking-[-0.05em] lg:text-[70px] lg:tracking-[-0.055em]">
           {t("title")}
           <br />
           <span className="gradient-text">{t("title_highlight")}</span>

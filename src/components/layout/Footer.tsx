@@ -40,9 +40,9 @@ export async function Footer({ locale }: FooterProps) {
               <Image
                 src="/logo.svg"
                 alt="NGENI"
-                width={120}
-                height={31}
-                className="h-8 w-auto"
+                width={160}
+                height={41}
+                className="h-10 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-gray">
