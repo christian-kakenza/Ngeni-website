@@ -80,22 +80,22 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
         <div className="pointer-events-none absolute left-1/4 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-brand-accent/[0.07] blur-[140px]" />
 
         <div className="container-max relative z-10 px-4 md:px-8 lg:px-16 xl:px-24">
-          {/* Back link */}
-          <a
-            href={`/${locale}#services`}
-            className="mb-10 inline-flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-accent"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-4 w-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-            </svg>
-            {t.back}
-          </a>
-
-          {/* Badge */}
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-accent">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-accent" />
-            {content.badge}
-          </span>
+          {/* Top row: back link (left) + badge (right) */}
+          <div className="mb-10 flex items-center justify-between">
+            <a
+              href={`/${locale}#services`}
+              className="inline-flex items-center gap-2 text-sm text-brand-gray transition-colors hover:text-brand-accent"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-4 w-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
+              {t.back}
+            </a>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-accent" />
+              {content.badge}
+            </span>
+          </div>
 
           {/* Title */}
           <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight text-brand-white md:text-5xl lg:text-6xl">
@@ -198,10 +198,6 @@ export default function ServicePage({ params: { locale, slug } }: ServicePagePro
                 key={i}
                 className="group rounded-2xl border border-brand-border bg-brand-surface/30 p-5 backdrop-blur-sm transition-all duration-300 hover:border-brand-accent/30 hover:bg-brand-surface/50"
               >
-                {/* Feature number */}
-                <span className="mb-3 inline-block font-mono text-xs font-bold text-brand-accent/40">
-                  0{i + 1}
-                </span>
                 <h3 className="font-semibold text-brand-white">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-gray">{feature.description}</p>
               </div>
